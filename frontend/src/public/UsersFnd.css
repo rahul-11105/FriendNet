@@ -8,14 +8,19 @@ ul {
     padding: 10px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 4px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
+    height: auto;
   }
-  li p{
-    position: relative;
-    right:170px;
-
+  span{
+    margin-left: 10px;
+    height: auto;
+    width:200px;
   }
-  
+  .RemoveFriend{
+    background-color:rgb(169, 66, 66);
+  }
+  .RemoveFriend:hover{
+    background-color:rgb(214, 54, 54);
+  }

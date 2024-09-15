@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main2{
+    height: 300px;
+    width:100%;
+    background-color:#f4f4f4;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.profile{
+    position:relative;
+  
+    height: 200px;
+    width: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ulogo{
+    height: 70px;
+    width: auto;
+    border-radius: 50%;
+}
+.uinfo{
+    height: 100px;
+    width: 250px;
+    background-color: white;
+    margin-left: 30px;
+    border-radius: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.uinfo p{
+    height: 40px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: bisque;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+}

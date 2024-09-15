@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Recommendation from './components/Recommendation';
 import Login from './components/Login';
+import UserProfile from './components/UserProfile';
 
 function App() {
   // State to track whether login is active or not
@@ -22,8 +23,10 @@ function App() {
       {/* Conditionally render components based on whether login is active */}
       {!isLoginActive ? (
         <>
-          <SearchBar />
-          <Recommendation />
+          <SearchBar/>
+          <Recommendation/>
+          <UserProfile/>
+
           {/* Add a button to trigger the login display */}
           <button onClick={handleLoginClick}>Login</button>
         </>
