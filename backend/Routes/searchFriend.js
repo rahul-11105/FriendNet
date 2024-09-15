@@ -24,4 +24,13 @@ routes.post('/', async (req, res) => {
     }
 });
 
+routes.get("/friends",async(req,res)=>{
+    try {
+        let friends = await User.find({});
+        res.json(friends);
+    }
+    catch{
+        res.send("<h1>no frns<h1>");
+    }
+});
 module.exports = routes;

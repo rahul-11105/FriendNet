@@ -33,8 +33,8 @@ app.use('/users',searchFriend);
 //         res.status(500).send("Error saving user: " + err.message);
 //     }
     
-// });
+// }); 
 
 app.listen(port,()=>{
     console.log(`app is listening at port ${port}`);
-});
+}); 
