@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar';
 import Recommendation from './components/Recommendation';
 import Login from './components/Login';
 import UserProfile from './components/UserProfile';
+import UserState from './Contex/UserState';
 
 function App() {
   // State to track whether login is active or not
@@ -16,7 +17,9 @@ function App() {
   };
 
   return (
-    <>
+    <UserState>
+
+<>
       {/* Show the navbar regardless */}
       <Navbar />
 
@@ -34,6 +37,9 @@ function App() {
         <Login/>
       )}
     </>
+
+    </UserState>
+    
   );
 }
 
