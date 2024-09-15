@@ -1,9 +1,11 @@
+const user = require("../model/user");
 const User = require("../model/user"); 
 const express = require("express");
 const routes = express.Router();
 
 routes.post('/', async (req, res) => {
     try {
+        
         //console.log("Received request body:", req.body);
         const user_name = req.body.Name;
         // Find users 

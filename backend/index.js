@@ -10,9 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 
-
+const uri = "mongodb+srv://rahullokhande11105:rahul11105@cluster0.yzyo5.mongodb.net/";
 //mongoDB connection
-main("mongodb://127.0.0.1:27017/FriendNet").then((res)=>{
+main(uri).then((res)=>{
     console.log("DB connected successfully");
 })
 .catch((err)=>{
