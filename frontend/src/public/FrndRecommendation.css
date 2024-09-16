@@ -18,11 +18,11 @@ ul {
     height: auto;
     width:200px;
   }
-  .RemoveFriend{
-    background-color:rgb(169, 66, 66);
+  .AddFriend{
+    background-color:green;
   }
-  .RemoveFriend:hover{
-    background-color:rgb(214, 54, 54);
+  .AddFriend:hover{
+    background-color:rgb(7, 155, 7);
   }
   #yourFriends{
     height: 300px;

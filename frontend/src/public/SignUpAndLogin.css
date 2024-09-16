@@ -1,0 +1,10 @@
+.Login{
+    height: 100px;
+    width: 250px;
+    background-color: rgba(214, 214, 214, 0.365);
+    margin-left: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

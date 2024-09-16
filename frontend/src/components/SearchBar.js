@@ -1,19 +1,19 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import "../public/SearchBar.css";
 import SearchResult from './SearchResult';
 
 export default function SearchBar() {
-  const [name1, setName] = useState(''); // Initialize state with an empty string
+  const [name, setName] = useState(''); // Initialize state with an empty string
 
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
     const inp = event.target.elements.searchInput.value; // Get the input value from the form
-    setName(inp); 
-
-    console.log('Submitted name:', inp); // Log the submitted name
+  
+    setName(inp); // Update the state with the new name
+    event.target.reset(); // Clear the input field after submission
   };
-  console.log("yuppp",name1)
+  
 
   return (
     <>
@@ -30,7 +30,7 @@ export default function SearchBar() {
         </form>
       </section>
       {/* Pass the searched name as a prop to SearchResult */}
-      <SearchResult name={name1} />
+      <SearchResult name={name} />
     </>
   );
 }

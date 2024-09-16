@@ -12,7 +12,7 @@ export default function UsersFnd(){
   }, []); 
 
   let arr = context1.frnd;
-  console.log(arr);
+
 
   if (loading) {
     return <p>Loading friends...</p>; // Display while fetching
@@ -21,7 +21,7 @@ export default function UsersFnd(){
   return (
     <>
       <section id="yourFriends">
-        <h2>Your Friends</h2>
+        <h2>Your Friends</h2> 
         <ul id="uFriends">
           {arr.length > 0 ? (
             arr.map(user => <Frnd key={user._id} name={user.Name} />) 
