@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-
+const localurl = "mongodb://127.0.0.1:27017/FriendNet";
 const uri = "mongodb+srv://rahullokhande11105:rahul11105@cluster0.yzyo5.mongodb.net/";
 //mongoDB connection
 main(uri).then((res)=>{
