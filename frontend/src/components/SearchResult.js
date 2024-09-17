@@ -12,9 +12,9 @@ export default function SearchResult(props) {
   useEffect(() => {
     // Fetch users when the name prop changes
     
-    const fetchUsers = async () => {
+    const fetchUsers = async () => { 
       try { 
-        const res = await fetch("http://localhost:8000/users/", {
+        const res = await fetch("https://friend-netbackend-iq237wxug-rahul-11105s-projects.vercel.app/users/", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ export default function SearchResult(props) {
           body: JSON.stringify({
             Name: name  // Replace with the actual user name you're sending
           })
-        }); 
+        });  
         
         const userData = await res.json();
         if (userData) {

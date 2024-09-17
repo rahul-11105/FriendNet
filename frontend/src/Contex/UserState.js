@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import React from 'react'
 
 export default function UserState(props) {
-
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2dmszVGNsclBpbFJpcDlDNFozQm52bnMiLCJpYXQiOjE3MjY1NjUwNzAsImF1ZCI6ImZyaWVuZC1uZXRiYWNrZW5kLWlxMjM3d3h1Zy1yYWh1bC0xMTEwNXMtcHJvamVjdHMudmVyY2VsLmFwcCIsInVzZXJuYW1lIjoicmFodWwtMTExMDUiLCJzdWIiOiJzc28tcHJvdGVjdGlvbiJ9.T8mxKtbi-NSGqSX7VVmv4uVkFWBfqkIOppVqKyuRJ9k"
   const [frnd,setfrnd] = useState([]);
   const [LoginFlag,setLoginFlag] = useState(true);
   const[userfriends,setuserfriends] = useState([]);
@@ -31,10 +31,15 @@ export default function UserState(props) {
  
 
   const getFriends = async ()=>{
-    const res = await fetch("http://localhost:8000/users/friends",{
-        method: 'get'
+    const res = await fetch("https://friend-netbackend-k5s8vrczl-rahul-11105s-projects.vercel.app/users/friends",{
+        method: 'get',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
     }).then(async(res)=>{
         const data = await res.json();
+        console.log(data);
         setfrnd(data);
     })
     .catch((err)=>{
