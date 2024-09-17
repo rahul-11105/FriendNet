@@ -1,16 +1,16 @@
 import React from 'react'
 import { useContext } from 'react';
 import "../public/Recommendation.css";
-
 import context from '../Contex/UserContext';
 import FrndRecommendation from './FrndRecommendation';
 
 export default function Recommendation() {
   const context1 = useContext(context);
   let arr = context1.frnd;
-  return (
+  
+  return ( 
     <>
-    <section className="recommendation">
+    <section className="recommendation"> 
         <h2>Recommendations</h2> 
         <ul id="ul">
           {arr.length > 0 ? (

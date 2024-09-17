@@ -7,8 +7,14 @@ export default function UserState(props) {
 
   const [frnd,setfrnd] = useState([]);
   const [LoginFlag,setLoginFlag] = useState(true);
-  const [isLoginActive, setIsLoginActive] = useState("no");
-  const [cancel,setcancel] = useState(true);
+  const[userfriends,setuserfriends] = useState([]);
+
+  const [formData, setFormData] = useState({
+    username: '',
+    useremail: '',
+    userpass: ''
+});
+  
     
   const handleSignUp = async ()=>{
     const res = await fetch("",{
@@ -22,34 +28,26 @@ export default function UserState(props) {
     })
 
   }
-  const handleLoginClick = () => {
-      setIsLoginActive("login");
-  };
-
-  const handleSignUpClick = () => {
-    setIsLoginActive("signup");
-};
-  
-  const handleCancelClick = ()=>{
-    console.log("clicked");
-      setcancel(true);
-  }
+ 
 
   const getFriends = async ()=>{
-    const res = await fetch("http://localhost:8000/users//friends",{
+    const res = await fetch("http://localhost:8000/users/friends",{
         method: 'get'
     }).then(async(res)=>{
         const data = await res.json();
         setfrnd(data);
     })
     .catch((err)=>{
-        res.send(<h1>no user</h1>)
+      setfrnd([]);
         
     });
   }
+  useEffect(()=>{
+    getFriends();
+  },[]);
   return (
    <>
-   <context.Provider value={{getFriends, frnd, LoginFlag, isLoginActive, handleLoginClick, handleSignUpClick, handleCancelClick, cancel }}>
+   <context.Provider value={{getFriends, setFormData, setuserfriends, userfriends ,formData, frnd, LoginFlag}}>
     {props.children}
    </context.Provider>
    </>

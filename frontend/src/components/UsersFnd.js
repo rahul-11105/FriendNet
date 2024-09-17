@@ -11,7 +11,7 @@ export default function UsersFnd(){
     context1.getFriends().finally(() => setLoading(false)); // Fetch friends and update loading state
   }, []); 
 
-  let arr = context1.frnd;
+  let arr = context1.userfriends;
 
 
   if (loading) {
@@ -24,7 +24,7 @@ export default function UsersFnd(){
         <h2>Your Friends</h2> 
         <ul id="uFriends">
           {arr.length > 0 ? (
-            arr.map(user => <Frnd key={user._id} name={user.Name} />) 
+            arr.map(user => <Frnd key={user._id} name={user} />) 
           ) : (
             <p>Oops! No friends found</p>
           )}

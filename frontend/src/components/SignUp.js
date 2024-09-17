@@ -1,61 +1,74 @@
-import React from 'react'
-import context from '../Contex/UserContext';
-import { useContext,useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../public/SignUp.css";
-import App from '../App';
+import context from '../Contex/UserContext';
 
 export default function SignUp() {
+    const {formData, setFormData} = useContext(context);
 
-    const [formData, setFormData] = useState({
-        username: '',
-        useremail: '',
-        userpass: ''
-      });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
 
-    const {handleCancelClick, cancel} = useContext(context);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData); 
+        alert("Form submitted");
+    };
 
-    const handlesubmit = (e)=>{
-          //e.preventDefault();
-          alert("form submmitted");
-    }
-
-    const handle = ()=>{
-       console.log("ohhhhhhhhkkkkkkkk");
-       handleCancelClick();
-    }
-
-  return (
-      <>
-    
-    <div className='master1'>
-                <div class="main">
-                    <form onSubmit={handlesubmit}>
-                        <h1>sign-up</h1>
-                        <div class="input-box">
-                            <input type="text" name="username" placeholder="enter name" id="name"/>
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="text" name="useremail" placeholder="example@gmail.com" id="email"/>
-                            <i class='bx bxs-user'></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="text" name="userpass" placeholder="password" id="pass"/>
-                            <i class="fa-solid fa-user-lock"></i>
-                            </div>
-                            <div class="remember-forgot">
-                                <label><input type="checkbox"/>Remember me</label>
-                            </div>
-                            <button type="submit" class="btn">signup</button>
-                    <div className='sbtn'>
-                            <button type='button' className='cancel' onClick={handle} >cancel</button>
+    return (
+        <div className='master1'>
+            <div className="main">
+                <form onSubmit={handleSubmit}>
+                    <h1>Sign Up</h1>
+                    <div className="input-box">
+                        <input
+                            type="text"
+                            name="username"
+                            placeholder="Enter name"
+                            id="name"
+                            value={formData.username}
+                            onChange={handleChange}
+                        />
+                        <i className="fa-solid fa-user"></i>
                     </div>
-                    </form>
-                    
-                </div>
-    </div>
-
-    
-    </>
-  )
+                    <div className="input-box">
+                        <input
+                            type="email"
+                            name="useremail"
+                            placeholder="example@gmail.com"
+                            id="email"
+                            value={formData.useremail}
+                            onChange={handleChange}
+                        />
+                        <i className='bx bxs-user'></i>
+                    </div>
+                    <div className="input-box">
+                        <input
+                            type="password"
+                            name="userpass"
+                            placeholder="Password"
+                            id="pass"
+                            value={formData.userpass}
+                            onChange={handleChange}
+                        />
+                        <i className="fa-solid fa-user-lock"></i>
+                    </div>
+                    <div className="remember-forgot">
+                        <label><input type="checkbox"/>Remember me</label>
+                    </div>
+                    <button type="submit" className="btn"><Link to="/home">signup</Link></button>
+                    <div className='sbtn'>
+                        <button type='button' className='cancel'>
+                            <Link to="/home">Cancel</Link>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
 }

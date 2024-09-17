@@ -3,9 +3,9 @@
     padding: 0px;
 }
 .main2{
-    height: 350px;
+    height:auto;
     width:100%;
-    background-color:#f4f4f4;
+    background-color:transparent;
     border: none;
     display: flex;
     align-items: center;
@@ -14,8 +14,8 @@
 }
 .profile{
     position:relative;
-    height: 200px;
-    width: 400px;
+    height:150px;
+    width: 500px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: white;
@@ -46,7 +46,7 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    background-color: bisque;
+    background-color: rgb(221, 221, 221);
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 5px black;
