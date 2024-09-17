@@ -14,7 +14,7 @@ export default function SearchResult(props) {
     
     const fetchUsers = async () => { 
       try { 
-        const res = await fetch("https://friend-netbackend-iq237wxug-rahul-11105s-projects.vercel.app/users/", {
+        const res = await fetch("https://friendnet-backend.onrender.com/users/", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

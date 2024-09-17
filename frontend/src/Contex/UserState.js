@@ -31,7 +31,7 @@ export default function UserState(props) {
  
 
   const getFriends = async ()=>{
-    const res = await fetch("https://friend-netbackend-k5s8vrczl-rahul-11105s-projects.vercel.app/users/friends",{
+    const res = await fetch("https://friendnet-backend.onrender.com/users/friends",{
         method: 'get',
         headers: {
           'Authorization': `Bearer ${token}`,
