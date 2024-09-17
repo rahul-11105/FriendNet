@@ -11,7 +11,7 @@ export default function Search(props) {
 
   return (
     <>
-      <li><UserLogo/><p>{props.name}</p><button onClick={handleclick} class="addFriend">Add Friend</button></li>
+      <li><UserLogo/><p>{props.name}</p><button onClick={handleclick} className="addFriend">Add Friend</button></li>
     </>
   )
 }

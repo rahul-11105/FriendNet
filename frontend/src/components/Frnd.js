@@ -10,6 +10,6 @@ export default function Frnd(props) {
       setuserfriends(userfriends.filter(friend => friend !== props.name));
     };
   return (
-    <><li><UserLogo/><span id='name'>{props.name}</span><button onClick={remove} class="RemoveFriend">Remove Friend</button></li></>
+    <><li><UserLogo/><span id='name'>{props.name}</span><button onClick={remove} className="RemoveFriend">Remove Friend</button></li></>
   )
 }

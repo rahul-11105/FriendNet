@@ -9,7 +9,7 @@ export default function FrndRecommendation(props) {
       setuserfriends([...userfriends,props.name]);
     };
   return (
-    <><li><UserLogo/><span id='name'>{props.name}</span><button onClick={handleclick} class="AddFriend">Add</button></li></>
+    <><li><UserLogo/><span id='name'>{props.name}</span><button onClick={handleclick} className="AddFriend">Add</button></li></>
   )
 }
  

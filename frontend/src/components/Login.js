@@ -24,24 +24,24 @@ export default function Login() {
   return (
     <>
     <div className='master'>
-    <div class="main">
+    <div className="main">
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>
-            <div class="input-box">
+            <div className="input-box">
                 <input type="text" name='username' placeholder="Username"  onChange={handleChange1}/>
-                <i class='bx bxs-user'></i>
+                <i className='bx bxs-user'></i>
             </div>
-            <div class="input-box">
+            <div className="input-box">
                 <input type="password" placeholder="Password"/>
-                <i class='bx bxs-lock-alt'></i>
+                <i className='bx bxs-lock-alt'></i>
                 </div> 
-                <div class="remember-forgot">
+                <div className="remember-forgot">
                     <label><input type="checkbox"/>Remember me</label>
                     <a href="#">Forgot password</a>
                 </div>
-                <button type="submit" class="btn"><Link to="/home">Login</Link></button>
+                <button type="submit" className="btn"><Link to="/home">Login</Link></button>
 
-                <div class="register-link">
+                <div className="register-link">
                     <p>Don't have an account? <Link style={{color:"pink"}} to="/signup">Register</Link></p>
                 </div>
                 <div className='lbtn'>
