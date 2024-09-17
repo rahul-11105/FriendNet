@@ -12,13 +12,15 @@ export default function Recommendation() {
     <>
     <section className="recommendation"> 
         <h2>Recommendations</h2> 
-        <ul id="ul">
-          {arr.length > 0 ? (
-            arr.map(user => <FrndRecommendation key={user._id} name={user.Name} />) 
-          ) : (
-            <p>Oops! No friends found</p>
-          )}
-        </ul>
+        <div className='reco'>
+            <ul id="ul">
+              {arr.length > 0 ? (
+                arr.map(user => <FrndRecommendation key={user._id} name={user.Name} />) 
+              ) : (
+                <p>Oops! No friends found</p>
+              )}
+            </ul>
+        </div>
       </section>
     </>
   )

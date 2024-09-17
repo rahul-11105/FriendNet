@@ -22,14 +22,16 @@ export default function UsersFnd(){
     <>
       <section id="yourFriends">
         <h2>Your Friends</h2> 
-        <ul id="uFriends">
-          {arr.length > 0 ? (
-            arr.map(user => <Frnd key={user._id} name={user} />) 
-          ) : (
-            <p>Oops! No friends found</p>
-          )}
-        </ul>
+        <div className='ufrnd'>
+            <ul id="uFriends">
+              {arr.length > 0 ? (
+                arr.map(user => <Frnd key={user._id} name={user} />) 
+              ) : (
+                <p>Oops! No friends found</p>
+              )}
+            </ul>
+        </div>
       </section>
     </>
   );
-}
+} 

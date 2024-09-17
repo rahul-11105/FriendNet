@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext} from 'react';
 import "../public/searchResult.css";
 import Search from './Search';
+
 
 export default function SearchResult(props) {
   const [users, setUsers] = useState([]); // State to store fetched users
   const [error, setError] = useState(null); // State to handle errors
   const { name } = props; // Destructure name from props
- 
+
 
   useEffect(() => {
     // Fetch users when the name prop changes
