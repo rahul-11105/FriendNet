@@ -5,11 +5,7 @@ const user = require("./model/user");
 const searchFriend = require("./Routes/searchFriend");
 const port = process.env.PORT || 8000;
 const cors = require('cors');
-app.use(cors(
-  {origin: 'http://localhost:3000', // Allow only this origin
-  methods: 'GET,POST,PUT,DELETE',  // Specify allowed methods
-  credentials: true,}
-));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
