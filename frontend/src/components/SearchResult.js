@@ -14,7 +14,7 @@ export default function SearchResult(props) {
     
     const fetchUsers = async () => { 
       try { 
-        const res = await fetch("https://friendnet-backend.onrender.com/users/", {
+        const res = await fetch("https://friendnet-backend-f.onrender.com/users/", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
